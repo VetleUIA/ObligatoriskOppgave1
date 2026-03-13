@@ -12,3 +12,4 @@
 - Søke etter kurs
 - Bibliotek med utlån og retur
 - Lånehistorikk
+- Printe kurs og deltakere

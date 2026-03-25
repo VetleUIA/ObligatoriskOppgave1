@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.Marshalling;
 
 namespace obligatorisk_oppgave_1;
-
+// forklaring:  
 public class Program
 {
     static List<Student> students = new List<Student>();
@@ -231,7 +231,8 @@ public class Program
     {
         Console.Write("Bok-ID: ");
         string bookId = Console.ReadLine();
-
+        
+        // poly
         User borrower = FindUser();
 
         if (borrower == null)
@@ -253,6 +254,7 @@ public class Program
         Console.Write("Bok-ID: ");
         string bookId = Console.ReadLine();
 
+        // arv 
         User borrower = FindUser();
 
         if (borrower == null)

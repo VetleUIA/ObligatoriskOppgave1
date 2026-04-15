@@ -6,10 +6,13 @@
 2. Åpne i Rider eller Visual Studio
 3. Kjør Program.cs
 
-## Funksjonalitet
-- Opprette kurs
-- Melde studenter på kurs
-- Søke etter kurs
-- Bibliotek med utlån og retur
-- Lånehistorikk
-- Printe kurs og deltakere
+##Funksjonalitet
+
+-Registrering og innlogging av brukere
+-Håndtering av roller i systemet
+-Opprettelse og søk etter kurs
+-Påmelding og avmelding av studenter
+-Karaktersetting og pensumregistrering
+-Biblioteksystem med søk, utlån, retur og historikk
+-Utskrift av kurs og deltakere
+

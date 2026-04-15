@@ -31,11 +31,11 @@ public class Library
     
     public bool BorrowBook(string bookId, User borrower)
     {
-        var book = Books.FirstOrDefault(b => b.Id == bookId);
+        var book = Books.FirstOrDefault(b => b.Id.Equals(bookId, StringComparison.OrdinalIgnoreCase));
         if (book == null)
             return false; 
         
-        int activeLoans = Loans.Count(I => I.Book.Id == bookId && I.IsActive);
+        int activeLoans = Loans.Count(I => I.Book.Id.Equals(bookId,StringComparison.OrdinalIgnoreCase) && I.IsActive);
 
         if (activeLoans >= book.TotalCopies)
             return false; 
@@ -49,8 +49,8 @@ public class Library
     public bool ReturnBook(string bookId, User borrower)
     {
         var loan = Loans.FirstOrDefault(I =>
-            I.Book.Id == bookId &&
-            I.Borrower == borrower && 
+            I.Book.Id.Equals(bookId, StringComparison.OrdinalIgnoreCase) &&
+            I.Borrower.GetUserKey() == borrower.GetUserKey()&&
             I.IsActive);
 
         if (loan == null)
